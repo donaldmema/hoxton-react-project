@@ -64,6 +64,30 @@
       "name": "Big Mama",
       "email": "bigmama@email.com",
       "password": "user1234"
+    },
+    {
+      "email": "guy@email.com",
+      "password": "user1234",
+      "name": "Guy",
+      "id": 3
+    },
+    {
+      "email": "girl@email.com",
+      "password": "user1234",
+      "name": "Girl",
+      "id": 4
+    },
+    {
+      "email": "shey@email.com",
+      "password": "1234",
+      "name": "Shey",
+      "id": 5
+    },
+    {
+      "email": "ley@email.com",
+      "password": "1234",
+      "name": "Ley",
+      "id": 6
     }
   ],
   "characteristics": [
@@ -73,7 +97,9 @@
       "answer1": "Red",
       "answer2": "Decepticons",
       "answer3": "Yes",
-      "answer4": "Draco Malfoy"
+      "answer4": "Draco Malfoy",
+      "answer5": "Yes",
+      "answer6": "Yes"
     },
     {
       "id": 2,
@@ -81,7 +107,9 @@
       "answer1": "Red",
       "answer2": "Decepticons",
       "answer3": "Yes",
-      "answer4": "Draco Malfoy"
+      "answer4": "Draco Malfoy",
+      "answer5": "Yes",
+      "answer6": "Yes"
     }
   ]
 }

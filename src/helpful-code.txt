@@ -40,3 +40,8 @@ items.sort((a, b) => a.createdAt - b.createdAt);
 
 
 
+
+
+for compatibility test use radio buttons and select dropdowns 
+use a score variable.. if user1.answer1 === user2.answer1 then score++ ... if there are 6 questions: if score>4 then user1 is compatible with user2
+
