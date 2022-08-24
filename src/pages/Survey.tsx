@@ -6,12 +6,12 @@ export function Survey() {
   function handleSubmit(event) {
     event.preventDefault();
     const form = event.target;
-    let answer1 = form.answer1.value;
-    let answer2 = form.answer2.value;
-    let answer3 = form.answer3.value;
-    let answer4 = form.answer4.value;
-    let answer5 = form.answer5.value;
-    let answer6 = form.answer6.value;
+    let answer1 = form.question1.value;
+    let answer2 = form.question2.value;
+    let answer3 = form.question3.value;
+    let answer4 = form.question4.value;
+    let answer5 = form.question5.value;
+    let answer6 = form.question6.value;
 
     let survey = {
       userId: localStorage.id,
@@ -23,13 +23,24 @@ export function Survey() {
       answer6,
     };
 
-    
+    fetch(`http://localhost:3005/characteristics`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(survey),
+    })
+      .then((response) => response.json())
+      .then((survey) => {
+        console.log(survey);
+        navigate("/home");
+      });
   }
 
   return (
     <div>
       <h2>Survey</h2>
-      <form>
+      <form onSubmit={(event) => handleSubmit(event)}>
         <label htmlFor="question1">What is your dream pet?</label>
         <select name="question1" id="question1" required>
           <option value="">--Please choose an option--</option>
