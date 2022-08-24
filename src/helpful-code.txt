@@ -1,0 +1,42 @@
+You can use json-server as a module in combination with Express middleware: https://github.com/typicode/json-server#module.
+
+They have an example to save createdAt for POST request:
+
+server.use((req, res, next) => {
+  if (req.method === 'POST') {
+    req.body.createdAt = Date.now()
+  }
+  // Continue to JSON Server router
+  next()
+})
+
+
+
+
+
+
+Your date format is one that can be sorted alphabetically so you can simply use sort and compare the strings directly without converting to dates.
+
+json.sort(function (a, b) {
+    if (a.timestamp > b.timestamp){
+      return 1;
+    } else if (a.timestamp < b.timestamp){
+      return -1;
+    } else {
+        return 0;
+    }
+});
+
+
+for the date functionality:
+
+1) use the post method to automatically add the *createdAt* property as a: *new Date()*
+
+2) use the sort method to sort the array by the *createdAt* property in ascending order like this: dateArrayyy.sort((a, b) => a - b)   https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort?redirectlocale=en-US&redirectslug=JavaScript/Reference/Global_Objects/Array/sort
+items.sort((a, b) => a.createdAt - b.createdAt);
+
+3) use classname to differentiate between sender and receiver, incoming messages should be on the left and outgoing on the right
+
+
+
+

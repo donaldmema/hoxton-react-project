@@ -1,0 +1,10 @@
+
+messages would be an array of objects type message:
+
+{
+  id: 1,
+  text: 'Hello World',
+  createdAt: new Date(),
+  userId: 1,
+  toUserId: 2
+}
