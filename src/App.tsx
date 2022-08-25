@@ -14,16 +14,17 @@ function App() {
 
   return (
     <div className="App">
-      <main>
-        <Routes>
-          <Route index element={<Navigate to="/sign-in" />} />
-          <Route path="/home" element={<HomePage user={user} />} />
-          <Route path="/sign-up" element={<SignUp />} />
-          <Route path="/sign-up/survey" element={<Survey />} />
-          <Route path="/sign-in" element={<SignIn setUser={setUser} />} />
-          {/* <Route path="*" element={<PageNotFound />} /> */}
-        </Routes>
-      </main>
+      <Routes>
+        <Route index element={<Navigate to="/sign-in" />} />
+        <Route
+          path="/home"
+          element={<HomePage user={user} setUser={setUser} />}
+        />
+        <Route path="/sign-up" element={<SignUp />} />
+        <Route path="/sign-up/survey" element={<Survey />} />
+        <Route path="/sign-in" element={<SignIn setUser={setUser} />} />
+        {/* <Route path="*" element={<PageNotFound />} /> */}
+      </Routes>
     </div>
   );
 }

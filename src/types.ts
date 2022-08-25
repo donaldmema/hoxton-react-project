@@ -5,7 +5,7 @@ export type User = {
   password: string;
 };
 
-export type Characteristics = {
+export type CharacteristicsItem = {
   id: number;
   userId: number;
   answer1: string;
@@ -16,10 +16,22 @@ export type Characteristics = {
   answer6: string;
 };
 
-export type Post = {
+export type CommentItem = {
+  id: number;
+  content: string;
+  postId: number;
+};
+
+export type PostItem = {
   id: number;
   caption: string;
   imageUrl: string;
   userId: number;
+  username: string;
   createdAt: string;
+  comments: {
+    id: number;
+    content: string;
+    postId: number;
+  }[];
 };

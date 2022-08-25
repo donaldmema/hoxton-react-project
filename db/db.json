@@ -5,6 +5,7 @@
       "caption": "This is a simple post",
       "imageUrl": "https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
       "userId": 1,
+      "username": "Joe Moamoa(but the o's are silent)",
       "createdAt": "August 21, 2022"
     },
     {
@@ -12,6 +13,7 @@
       "caption": "This is an old post",
       "imageUrl": "https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
       "userId": 2,
+      "username": "Big Mama",
       "createdAt": "September 3, 2021"
     },
     {
@@ -19,6 +21,7 @@
       "caption": "This is an old post",
       "imageUrl": "https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
       "userId": 3,
+      "username": "Guy Lee",
       "createdAt": "September 2, 2021"
     },
     {
@@ -26,6 +29,7 @@
       "caption": "This is an old post",
       "imageUrl": "https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
       "userId": 4,
+      "username": "Girlish Bambina",
       "createdAt": "October 26, 2021"
     },
     {
@@ -33,6 +37,7 @@
       "caption": "This is an old post",
       "imageUrl": "https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
       "userId": 5,
+      "username": "Shey La'beuf",
       "createdAt": "September 5, 2021"
     },
     {
@@ -40,7 +45,35 @@
       "caption": "This is a post",
       "imageUrl": "https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjE=crop&w=800&q=60",
       "userId": 6,
+      "username": "Ley Lay",
       "createdAt": "September 27, 2021"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "content": "What a cute dog!",
+      "postId": 6
+    },
+    {
+      "id": 2,
+      "content": "He has the paws for this!",
+      "postId": 3
+    },
+    {
+      "id": 3,
+      "content": "Someone's in trouble!",
+      "postId": 4
+    },
+    {
+      "postId": 5,
+      "content": "Funny dog!!",
+      "id": 4
+    },
+    {
+      "postId": 6,
+      "content": "Hes a good boy!!",
+      "id": 5
     }
   ],
   "messages": [

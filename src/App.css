@@ -6,11 +6,61 @@
 
 .App {
   height: 100vh;
-  text-align: center;
+  /* text-align: center; */
   /* background-color: #0d1117;
   color: white; */
 }
 
-/* button {
-  font-size: calc(2px + 2vmin);
-} */
+.user-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.header {
+  width: 80vw;
+  margin-left: 5rem;
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 1fr 650px auto;
+  place-items: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.app-title {
+  width: 20px;
+}
+
+.search-input {
+  width: 70%;
+  height: 40px;
+  border-radius: 11px;
+  border: 1px solid #ccc;
+  padding: 0 10px;
+  font-size: 16px;
+  outline: none;
+}
+
+.header-right-section {
+  display: grid;
+  grid-auto-flow: column;
+  /* grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); */
+  gap: 1rem;
+  place-items: center;
+}
+
+.react-icons {
+  font-size: 25px;
+}
+
+.signout-btn {
+  background-color: #0d1117;
+  color: white;
+  border: none;
+  border-radius: 11px;
+  padding: 9px 18px;
+  font-size: 15px;
+  outline: none;
+  cursor: pointer;
+}
