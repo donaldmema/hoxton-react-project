@@ -12,7 +12,35 @@
       "caption": "This is an old post",
       "imageUrl": "https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
       "userId": 2,
-      "createdAt": "September 26, 2021"
+      "createdAt": "September 3, 2021"
+    },
+    {
+      "id": 3,
+      "caption": "This is an old post",
+      "imageUrl": "https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
+      "userId": 3,
+      "createdAt": "September 2, 2021"
+    },
+    {
+      "id": 4,
+      "caption": "This is an old post",
+      "imageUrl": "https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
+      "userId": 4,
+      "createdAt": "October 26, 2021"
+    },
+    {
+      "id": 5,
+      "caption": "This is an old post",
+      "imageUrl": "https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
+      "userId": 5,
+      "createdAt": "September 5, 2021"
+    },
+    {
+      "id": 6,
+      "caption": "This is a post",
+      "imageUrl": "https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjE=crop&w=800&q=60",
+      "userId": 6,
+      "createdAt": "September 27, 2021"
     }
   ],
   "messages": [
@@ -98,7 +126,7 @@
   ],
   "characteristics": [
     {
-      "userId": "1",
+      "userId": 1,
       "answer1": "dog",
       "answer2": "orange",
       "answer3": "three",
@@ -108,7 +136,7 @@
       "id": 1
     },
     {
-      "userId": "2",
+      "userId": 2,
       "answer1": "cat",
       "answer2": "yellow",
       "answer3": "one",
@@ -118,7 +146,7 @@
       "id": 2
     },
     {
-      "userId": "3",
+      "userId": 3,
       "answer1": "dog",
       "answer2": "orange",
       "answer3": "three",
@@ -128,7 +156,7 @@
       "id": 3
     },
     {
-      "userId": "4",
+      "userId": 4,
       "answer1": "dog",
       "answer2": "orange",
       "answer3": "three",
@@ -138,7 +166,7 @@
       "id": 4
     },
     {
-      "userId": "5",
+      "userId": 5,
       "answer1": "dog",
       "answer2": "orange",
       "answer3": "three",
@@ -148,7 +176,7 @@
       "id": 5
     },
     {
-      "userId": "6",
+      "userId": 6,
       "answer1": "dog",
       "answer2": "orange",
       "answer3": "three",
@@ -158,7 +186,7 @@
       "id": 6
     },
     {
-      "userId": "7",
+      "userId": 7,
       "answer1": "dog",
       "answer2": "orange",
       "answer3": "three",

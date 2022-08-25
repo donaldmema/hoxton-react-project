@@ -1,77 +1,32 @@
-import { Characteristics, User } from "../types";
+import { Characteristics, Post, User } from "../types";
 import { GrHomeRounded } from "react-icons/Gr";
 import { RiMessengerLine } from "react-icons/Ri";
 import { CgAddR } from "react-icons/cg";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { Header } from "../components/Header";
 type Props = {
   user: User | null;
 };
 
 export function HomePage({ user }: Props) {
   const [usersIds, setUsersIds] = useState<number[]>([]);
+
   const [currentUserCharacteristics, setCurrentUserCharacteristics] =
     useState<Characteristics>();
+
   const [usersCharacteristics, setUsersCharacteristics] = useState<
     Characteristics[]
   >([]);
+
+  const [posts, setPosts] = useState<Post[]>([]);
+
   const navigate = useNavigate();
 
-  useEffect(() => {
-    if (user === null) {
-      navigate("/sign-in");
-    }
-  }, []);
+  function findCompatibleUsersIds() {
+    let compatibleUsersIds: number[] = [];
 
-  // useEffect(() => {   //maybe i dont need this
-  //   fetch(`http://localhost:3005/users?id_ne=${user?.id}`)
-  //     .then((res) => res.json())
-  //     .then((usersFromServer) => setUsers(usersFromServer));
-  // }, []);
-
-  useEffect(() => {
-    fetch(`http://localhost:3005/characteristics?userId=${user?.id}`)
-      .then((res) => res.json())
-      .then((userCharacteristics) =>
-        setCurrentUserCharacteristics(userCharacteristics)
-      );
-  }, []);
-
-  useEffect(() => {
-    fetch(`http://localhost:3005/characteristics?userId_ne=${user?.id}`)
-      .then((res) => res.json())
-      .then((userCharacteristics) =>
-        setUsersCharacteristics(userCharacteristics)
-      );
-  }, []);
-
-  // function findCompatibleUsersIds(
-  //   currentUserCharacteristics: Characteristics,
-  //   userCharacteristics: Characteristics
-  // ) {
-  //   let totalCommonAnswers = 0;
-
-  //   if (currentUserCharacteristics.answer1 === userCharacteristics.answer1)
-  //     totalCommonAnswers++;
-  //   if (currentUserCharacteristics.answer2 === userCharacteristics.answer2)
-  //     totalCommonAnswers++;
-  //   if (currentUserCharacteristics.answer3 === userCharacteristics.answer3)
-  //     totalCommonAnswers++;
-  //   if (currentUserCharacteristics.answer4 === userCharacteristics.answer4)
-  //     totalCommonAnswers++;
-  //   if (currentUserCharacteristics.answer5 === userCharacteristics.answer5)
-  //     totalCommonAnswers++;
-  //   if (currentUserCharacteristics.answer6 === userCharacteristics.answer6)
-  //     totalCommonAnswers++;
-
-  //   if (totalCommonAnswers >= 4) return userCharacteristics.userId;
-  //   else return;
-  // }
-
-  let compatibleUsersIds: number[] = [];
-
-  let compatibleUsersCharacteristics = usersCharacteristics.forEach(
-    (userCharacteristic) => {
+    usersCharacteristics.forEach((userCharacteristic) => {
       let totalCommonAnswers = 0;
       if (!currentUserCharacteristics) return;
       if (currentUserCharacteristics.answer1 === userCharacteristic.answer1)
@@ -87,32 +42,56 @@ export function HomePage({ user }: Props) {
       if (currentUserCharacteristics.answer6 === userCharacteristic.answer6)
         totalCommonAnswers++;
 
-      console.log(
-        currentUserCharacteristics.answer1,
-        userCharacteristic.answer1
-      );
-      console.log(totalCommonAnswers);
-
       if (totalCommonAnswers >= 4)
         compatibleUsersIds.push(userCharacteristic.userId);
-    }
-  );
+    });
+    setUsersIds(compatibleUsersIds);
+  }
 
-  console.log(compatibleUsersIds);
+  function filterPostsForCompatibleUsers() {
+    let compatiblePosts: Post[] = [];
+    posts.forEach((post) => {
+      if (usersIds.includes(post.userId)) compatiblePosts.push(post);
+    });
+    setPosts(compatiblePosts);
+  }
+
+  useEffect(() => {
+    if (user === null) {
+      navigate("/sign-in");
+    }
+  }, []);
+
+  useEffect(() => {
+    fetch(`http://localhost:3005/posts`)
+      .then((res) => res.json())
+      .then((postsFromServer) => setPosts(postsFromServer));
+  }, []);
+
+  useEffect(() => {
+    fetch(`http://localhost:3005/characteristics?userId=${user?.id}`)
+      .then((res) => res.json())
+      .then((userCharacteristics) =>
+        setCurrentUserCharacteristics(userCharacteristics[0])
+      );
+  }, []);
+
+  useEffect(() => {
+    fetch(`http://localhost:3005/characteristics?userId_ne=${user?.id}`)
+      .then((res) => res.json())
+      .then((userCharacteristics) =>
+        setUsersCharacteristics(userCharacteristics)
+      );
+  }, []);
+
+  useEffect(() => {
+    findCompatibleUsersIds();
+    filterPostsForCompatibleUsers();
+  }, [currentUserCharacteristics, usersCharacteristics]);
 
   return (
     <div>
-      <header>
-        <h1>Swinder</h1>
-        <input type="search" name="search" placeholder="Search" />
-        <GrHomeRounded />
-        <RiMessengerLine />
-        <CgAddR />
-        <img src="" alt="Profile" />
-        <span>
-          <button>Sign out</button>
-        </span>
-      </header>
+      <Header />
       <aside></aside>
       <main>
         <article>

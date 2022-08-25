@@ -15,3 +15,11 @@ export type Characteristics = {
   answer5: string;
   answer6: string;
 };
+
+export type Post = {
+  id: number;
+  caption: string;
+  imageUrl: string;
+  userId: number;
+  createdAt: string;
+};
