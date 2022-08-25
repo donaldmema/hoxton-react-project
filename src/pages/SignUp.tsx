@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 export function SignUp() {
   const navigate = useNavigate();
 
-  function handleSubmit(event) {
+  function handleSubmit(event: any) {
     event.preventDefault();
 
     const form = event.target;

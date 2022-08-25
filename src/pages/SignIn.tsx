@@ -1,8 +1,12 @@
-import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { User } from "../types";
 
-export function SignIn() {
-  const [user, setUser] = useState<null | User>(null);
+type Props = {
+  setUser: React.Dispatch<React.SetStateAction<User | null>>;
+};
+
+export function SignIn({ setUser }: Props) {
+  const navigate = useNavigate();
 
   function signIn(user: User) {
     console.log("User signed in");
@@ -10,7 +14,7 @@ export function SignIn() {
     setUser(user);
   }
 
-  function handleSubmit(event) {
+  function handleSubmit(event: any) {
     event.preventDefault();
 
     const form = event.target;
@@ -20,10 +24,9 @@ export function SignIn() {
     fetch(`http://localhost:3005/users?email=${email}`)
       .then((response) => response.json())
       .then((user) => {
-        console.log(user);
-        console.log(password);
         if (user[0].password === password) {
           signIn(user[0]);
+          navigate("/home");
         } else {
           alert("User not found!");
         }

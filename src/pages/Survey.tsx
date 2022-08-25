@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 export function Survey() {
   const navigate = useNavigate();
 
-  function handleSubmit(event) {
+  function handleSubmit(event: any) {
     event.preventDefault();
     const form = event.target;
     let answer1 = form.question1.value;

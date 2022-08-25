@@ -57,59 +57,95 @@
       "id": 1,
       "name": "Joe",
       "email": "joe@email.com",
-      "password": "user1234"
+      "password": "user1234",
+      "characteristicId": 1
     },
     {
       "id": 2,
       "name": "Big Mama",
       "email": "bigmama@email.com",
-      "password": "user1234"
+      "password": "user1234",
+      "characteristicId": 2
     },
     {
       "email": "guy@email.com",
       "password": "user1234",
       "name": "Guy",
-      "id": 3
+      "id": 3,
+      "characteristicId": 3
     },
     {
       "email": "girl@email.com",
       "password": "user1234",
       "name": "Girl",
-      "id": 4
+      "id": 4,
+      "characteristicId": 4
     },
     {
       "email": "shey@email.com",
       "password": "1234",
       "name": "Shey",
-      "id": 5
+      "id": 5,
+      "characteristicId": 5
     },
     {
       "email": "ley@email.com",
       "password": "1234",
       "name": "Ley",
-      "id": 6
+      "id": 6,
+      "characteristicId": 6
     }
   ],
   "characteristics": [
     {
-      "id": 1,
-      "userId": 1,
-      "answer1": "Red",
-      "answer2": "Decepticons",
-      "answer3": "Yes",
-      "answer4": "Draco Malfoy",
-      "answer5": "Yes",
-      "answer6": "Yes"
+      "userId": "1",
+      "answer1": "dog",
+      "answer2": "orange",
+      "answer3": "three",
+      "answer4": "crazy",
+      "answer5": "cuddles",
+      "answer6": "oldtimer",
+      "id": 1
     },
     {
-      "id": 2,
-      "userId": 2,
-      "answer1": "Red",
-      "answer2": "Decepticons",
-      "answer3": "Yes",
-      "answer4": "Draco Malfoy",
-      "answer5": "Yes",
-      "answer6": "Yes"
+      "userId": "2",
+      "answer1": "cat",
+      "answer2": "yellow",
+      "answer3": "one",
+      "answer4": "crazy",
+      "answer5": "cuddles",
+      "answer6": "oldtimer",
+      "id": 2
+    },
+    {
+      "userId": "3",
+      "answer1": "dog",
+      "answer2": "orange",
+      "answer3": "three",
+      "answer4": "crazy",
+      "answer5": "cuddles",
+      "answer6": "oldtimer",
+      "id": 3
+    },
+    {
+      "userId": "4",
+      "answer1": "dog",
+      "answer2": "orange",
+      "answer3": "three",
+      "answer4": "crazy",
+      "answer5": "cuddles",
+      "answer6": "oldtimer",
+      "id": 4
+    },
+    {
+      "userId": "5",
+      "answer1": "dog",
+      "answer2": "orange",
+      "answer3": "three",
+      "answer4": "crazy",
+      "answer5": "cuddles",
+      "answer6": "oldtimer",
+      "id": 5
     },
     {
       "userId": "6",
@@ -119,7 +155,17 @@
       "answer4": "crazy",
       "answer5": "cuddles",
       "answer6": "oldtimer",
-      "id": 3
+      "id": 6
+    },
+    {
+      "userId": "7",
+      "answer1": "dog",
+      "answer2": "orange",
+      "answer3": "three",
+      "answer4": "crazy",
+      "answer5": "cuddles",
+      "answer6": "oldtimer",
+      "id": 7
     }
   ]
 }
