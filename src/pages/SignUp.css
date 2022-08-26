@@ -1,0 +1,76 @@
+.sign-up-page-container {
+  display: grid;
+  gap: 4rem;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  height: 100vh;
+
+  background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)),
+    url("https://static1.srcdn.com/wordpress/wp-content/uploads/2021/06/Tinder-banner-showing-lots-of-profile-images.jpg");
+  background-size: cover;
+}
+
+.sign-up__form-container {
+  margin-left: 30rem;
+  backdrop-filter: blur(20px);
+  border-radius: 16px;
+  display: grid;
+  gap: 1rem;
+  place-items: center;
+  justify-content: center;
+  padding: 2rem;
+  height: fit-content;
+  width: fit-content;
+  border: 1px solid #ccc;
+}
+
+.sign-up__form-container h1 {
+  font-family: "Brush Script MT", cursive;
+  font-size: 3.5rem;
+  background: -webkit-linear-gradient(#ff6036, #fd2655);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.sign-up__form-section {
+  display: grid;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.sign-up__form-section h4 {
+  color: #fff;
+  font-weight: 500;
+}
+
+.sign-up__form-section input {
+  width: 100%;
+  height: 35px;
+  border-radius: 9px;
+  border: 1px solid #ccc;
+  padding: 0 10px;
+  font-size: 14px;
+  /* outline: none; */
+}
+
+.signup-btn {
+  width: 100%;
+  height: 35px;
+  border-radius: 9px;
+  border: 1px solid #ccc;
+  padding: 0 10px;
+  font-size: 14px;
+  transition: 300ms;
+  /* outline: none; */
+}
+
+.signup-btn:hover {
+  filter: brightness(1.2);
+}
+
+.signup-btn:active {
+  filter: brightness(0.8);
+}

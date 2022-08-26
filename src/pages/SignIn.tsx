@@ -35,8 +35,9 @@ export function SignIn({ setUser }: Props) {
   }
 
   return (
-    <div>
+    <div className="sign-in-page-container">
       <div className="form-container">
+        <h1>Swinder</h1>
         <form
           className="form-section"
           onSubmit={(event) => {
@@ -50,13 +51,18 @@ export function SignIn({ setUser }: Props) {
             name="password"
             required
           />
-          <button type="submit">Sign In</button>
+          <button className="sign-in-btn" type="submit">Sign In</button>
         </form>
 
         <div className="or-div">
           <hr />
           OR
           <hr />
+        </div>
+        <div>
+          <button className="signup-btn" onClick={() => navigate("/sign-up")}>
+            Create Account
+          </button>
         </div>
       </div>
     </div>

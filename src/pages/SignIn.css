@@ -1,23 +1,99 @@
+.sign-in-page-container {
+  display: grid;
+  gap: 4rem;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  height: 100vh;
 
-.form-container{
-    display: grid;
-    gap: 1rem;
-    align-items: center;
-    justify-content: center;
-    padding: 2rem;
-    height: 30vh;
+  background-image: url("https://static1.srcdn.com/wordpress/wp-content/uploads/2021/06/Tinder-banner-showing-lots-of-profile-images.jpg");
+  background-size: cover;
+}
+
+.form-container {
+  margin-left: 30rem;
+  backdrop-filter: blur(20px);
+  border-radius: 16px;
+  display: grid;
+  gap: 1rem;
+  place-items: center;
+  justify-content: center;
+  padding: 2rem;
+  height: fit-content;
+  width: fit-content;
+  border: 1px solid #ccc;
+}
+
+.form-container h1 {
+  /* font-family: "Brush Script MT", cursive;
+  font-size: 3.5rem; */
+  background: -webkit-linear-gradient(#fd267a, #ff6036);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .or-div {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
 }
 
 .or-div hr {
-    width: 30%;
-    border: 1px solid #ccc;
+  width: 30%;
+  border: 1px solid #ccc;
+}
+
+.form-section {
+  display: grid;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.form-section input {
+  width: 100%;
+  height: 35px;
+  border-radius: 9px;
+  border: 1px solid #ccc;
+  padding: 0 10px;
+  font-size: 14px;
+  /* outline: none; */
+}
+
+.sign-in-btn {
+  background-color: #0095f6;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 500ms;
+}
+
+.sign-in-btn:hover {
+  filter: brightness(1.2);
+}
+
+.signup-btn {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  background-image: linear-gradient(to right, #fd267a, #ff6036);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 500ms;
+}
+
+.signup-btn:hover {
+  filter: brightness(1.2);
 }

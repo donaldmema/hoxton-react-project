@@ -1,3 +1,4 @@
+import "./SignUp.css";
 import { Link, useNavigate } from "react-router-dom";
 
 export function SignUp() {
@@ -32,25 +33,38 @@ export function SignUp() {
   }
 
   return (
-    <div>
-      <h2>SignUp</h2>
-      <form onSubmit={(event) => handleSubmit(event)}>
-        <input type="text" placeholder="Your Name Here" name="name" required />
-        <input
-          type="email"
-          placeholder="Your Email Here"
-          name="email"
-          required
-        />
-        <input
-          type="password"
-          placeholder="Enter a Password"
-          name="password"
-          required
-        />
+    <div className="sign-up-page-container">
+      <div className="sign-up__form-container">
+        <h1>Swinder</h1>
+        <form
+          className="sign-up__form-section"
+          onSubmit={(event) => handleSubmit(event)}
+        >
+          <h4>Create account:</h4>
+          <input
+            type="text"
+            placeholder="Your Name Here"
+            name="name"
+            required
+          />
+          <input
+            type="email"
+            placeholder="Your Email Here"
+            name="email"
+            required
+          />
+          <input
+            type="password"
+            placeholder="Enter a Password"
+            name="password"
+            required
+          />
 
-        <button type="submit">Sign Up</button>
-      </form>
+          <button className="signup-btn" type="submit">
+            Continue ➡
+          </button>
+        </form>
+      </div>
     </div>
   );
 }
