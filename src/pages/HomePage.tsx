@@ -11,7 +11,7 @@ type Props = {
 };
 
 export function HomePage({ user, setUser }: Props) {
-  const [usersIds, setUsersIds] = useState<number[]>([]);
+  // const [usersIds, setUsersIds] = useState<number[]>([]);
 
   const [currentUserCharacteristics, setCurrentUserCharacteristics] =
     useState<CharacteristicsItem>();
@@ -46,15 +46,19 @@ export function HomePage({ user, setUser }: Props) {
       if (totalCommonAnswers >= 4)
         compatibleUsersIds.push(userCharacteristic.userId);
     });
-    setUsersIds(compatibleUsersIds);
+    return compatibleUsersIds;
   }
 
-  function filterPostsForCompatibleUsers() {
+  function getPostsForCompatibleUsers() {
     let compatiblePosts: PostItem[] = [];
     posts.forEach((post) => {
-      if (usersIds.includes(post.userId)) compatiblePosts.push(post);
+      console.log("Post:", post);
+      let userIds = findCompatibleUsersIds();
+      console.log("User ids:", userIds);
+      if (userIds.includes(post.userId)) compatiblePosts.push(post);
+      console.log("CompatiblePosts:", compatiblePosts);
     });
-    setPosts(compatiblePosts);
+    return compatiblePosts;
   }
 
   function handleSignOut() {
@@ -90,10 +94,11 @@ export function HomePage({ user, setUser }: Props) {
       );
   }, []);
 
-  useEffect(() => {
-    findCompatibleUsersIds();
-    filterPostsForCompatibleUsers();
-  }, [currentUserCharacteristics, usersCharacteristics]);
+  const compPosts = getPostsForCompatibleUsers();
+
+  // useEffect(() => {
+  //   getPostsForCompatibleUsers();
+  // }, [currentUserCharacteristics, usersCharacteristics]);
 
   return (
     <div>
@@ -125,7 +130,7 @@ export function HomePage({ user, setUser }: Props) {
       </header>
       <aside></aside>
       <main>
-        <PostsContainer posts={posts} />
+        <PostsContainer posts={compPosts} />
       </main>
       <aside>
         <footer></footer>

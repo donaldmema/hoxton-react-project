@@ -32,7 +32,9 @@ export function ProfilePage({ user, handleSignOut }: Props) {
       .then((postsFromServer) => setTargetedUserPosts(postsFromServer));
   }, []);
 
-  // console.log(targetedUserPosts[0].username);
+  if (targetedUserPosts.length === 0) return <div></div>;
+
+  console.log(targetedUserPosts[0].username);
 
   return (
     <div>
@@ -68,10 +70,27 @@ export function ProfilePage({ user, handleSignOut }: Props) {
             />
           </div>
           <div className="profile__bio-section-right">
-            <h2>"targetedUserPosts[0].username"</h2>
+            <div className="bio-section-right__username">
+              <h2>{targetedUserPosts[0].username}</h2>
+              <button className="message-btn">Message</button>
+              <button className="follow-btn">Follow</button>
+            </div>
+            <div className="profile__bio-section-right__stats">
+              <span>65 posts</span>
+              <span>1.6K followers</span>
+              <span>420 following</span>
+            </div>
+            <div className="profile__bio-section-right__bio-content">
+              <p>Follow my Swinder so you can get swindled 💸</p>
+              <p>This Swinder account is very a-peel-ing 🍌</p>
+              <p>Somerandomlettersthathaveameaning</p>
+            </div>
           </div>
         </section>
-        <section className="profile__posts-section"></section>
+        <section className="profile__posts-section">
+          <h3>POSTS</h3>
+          <div className="posts-section__posts-container"></div>
+        </section>
       </div>
     </div>
   );

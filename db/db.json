@@ -74,6 +74,11 @@
       "postId": 6,
       "content": "Hes a good boy!!",
       "id": 5
+    },
+    {
+      "content": "",
+      "imageId": 3,
+      "id": 6
     }
   ],
   "messages": [

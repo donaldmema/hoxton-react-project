@@ -1,3 +1,4 @@
+import "./SignIn.css";
 import { useNavigate } from "react-router-dom";
 import { User } from "../types";
 
@@ -35,20 +36,29 @@ export function SignIn({ setUser }: Props) {
 
   return (
     <div>
-      <form
-        onSubmit={(event) => {
-          handleSubmit(event);
-        }}
-      >
-        <input type="email" placeholder="Email" name="email" required />
-        <input
-          type="password"
-          placeholder="Password"
-          name="password"
-          required
-        />
-        <button type="submit">Sign In</button>
-      </form>
+      <div className="form-container">
+        <form
+          className="form-section"
+          onSubmit={(event) => {
+            handleSubmit(event);
+          }}
+        >
+          <input type="email" placeholder="Email" name="email" required />
+          <input
+            type="password"
+            placeholder="Password"
+            name="password"
+            required
+          />
+          <button type="submit">Sign In</button>
+        </form>
+
+        <div className="or-div">
+          <hr />
+          OR
+          <hr />
+        </div>
+      </div>
     </div>
   );
 }
