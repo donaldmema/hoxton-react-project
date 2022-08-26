@@ -1,3 +1,4 @@
+import "./PostsContainer.css";
 import { PostItem } from "../types";
 import { Post } from "./Post";
 

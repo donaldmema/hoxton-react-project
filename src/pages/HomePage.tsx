@@ -126,53 +126,6 @@ export function HomePage({ user, setUser }: Props) {
       <aside></aside>
       <main>
         <PostsContainer posts={posts} />
-        <article>
-          <img
-            className="user-avatar"
-            src="https://images.pexels.com/photos/1851164/pexels-photo-1851164.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-            alt="profile"
-          />
-          <span>username</span>
-          <img
-            src="https://images.pexels.com/photos/1851164/pexels-photo-1851164.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-            alt="post img"
-          />
-        </article>
-        <article className="image-card">
-          <h2 className="title">Username</h2>
-          <img
-            src="https://images.pexels.com/photos/1851164/pexels-photo-1851164.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-            className="image"
-          />
-          <div className="likes-section">
-            <span className="likes">post.likes likes</span>
-            <button className="like-button">♥</button>
-          </div>
-          <ul className="comments">
-            <li>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi,
-              sit?
-            </li>
-          </ul>
-          <form
-            onSubmit={(event) => {
-              event.preventDefault();
-              // addComment(event.target.comment.value);
-              // event.target.reset();
-            }}
-            className="comment-form"
-          >
-            <input
-              className="comment-input"
-              type="text"
-              name="comment"
-              placeholder="Add a comment..."
-            />
-            <button className="comment-button" type="submit">
-              Post
-            </button>
-          </form>
-        </article>
       </main>
       <aside>
         <footer></footer>

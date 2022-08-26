@@ -1,0 +1,24 @@
+.profile__container {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.profile__bio-section{
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    height: 30vh;
+}
+
+.profile__bio-section-left img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+}

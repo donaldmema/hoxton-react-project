@@ -1,4 +1,6 @@
+import "./Post.css";
 import { PostItem } from "../types";
+import { Link } from "react-router-dom";
 
 type Props = {
   post: PostItem;
@@ -15,20 +17,22 @@ export function Post({ post }: Props) {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(newComment),
-    })
-      .then((resp) => resp.json())
-      .then((comment) => {
-        // setPosts({ ...posts, comments: [...posts.comments, comment] });
-        // post.comments.push(comment);
-        // setPosts([...posts, comment]);
-        //try adding comment/setcomment state to this file and then doing:
-        //setComments([...comments, comment]);
-      });
+    }).then((resp) => resp.json());
   }
 
   return (
     <article className="image-card">
-      <h2 className="title">{post.username}</h2>
+      <Link to={`/${post.userId}/${post.username}`}>
+        <div className="image-card-header">
+          <img
+            className="image-card__user-avatar"
+            src="https://images.pexels.com/photos/2023384/pexels-photo-2023384.jpeg"
+            alt="profile pic"
+          />
+          <h2 className="title">{post.username}</h2>
+        </div>
+      </Link>
+
       <img src={post.imageUrl} className="image" />
       <div className="likes-section">
         <span className="likes">42 likes</span>

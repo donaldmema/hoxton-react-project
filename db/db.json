@@ -5,7 +5,7 @@
       "caption": "This is a simple post",
       "imageUrl": "https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
       "userId": 1,
-      "username": "Joe Moamoa(but the o's are silent)",
+      "username": "JoeMoamoa(but the o's are silent)",
       "createdAt": "August 21, 2022"
     },
     {
@@ -13,7 +13,7 @@
       "caption": "This is an old post",
       "imageUrl": "https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
       "userId": 2,
-      "username": "Big Mama",
+      "username": "BigMama",
       "createdAt": "September 3, 2021"
     },
     {
@@ -21,31 +21,31 @@
       "caption": "This is an old post",
       "imageUrl": "https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
       "userId": 3,
-      "username": "Guy Lee",
+      "username": "GuyLee",
       "createdAt": "September 2, 2021"
     },
     {
       "id": 4,
       "caption": "This is an old post",
-      "imageUrl": "https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
+      "imageUrl": "https://images.pexels.com/photos/1851164/pexels-photo-1851164.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       "userId": 4,
-      "username": "Girlish Bambina",
+      "username": "GirlishBambina",
       "createdAt": "October 26, 2021"
     },
     {
       "id": 5,
       "caption": "This is an old post",
-      "imageUrl": "https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
+      "imageUrl": "https://images.pexels.com/photos/1851164/pexels-photo-1851164.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       "userId": 5,
-      "username": "Shey La'beuf",
+      "username": "SheyLa'beuf",
       "createdAt": "September 5, 2021"
     },
     {
       "id": 6,
       "caption": "This is a post",
-      "imageUrl": "https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjE=crop&w=800&q=60",
+      "imageUrl": "https://images.pexels.com/photos/1851164/pexels-photo-1851164.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       "userId": 6,
-      "username": "Ley Lay",
+      "username": "LeyLay",
       "createdAt": "September 27, 2021"
     }
   ],
